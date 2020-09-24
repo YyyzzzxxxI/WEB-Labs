@@ -2,7 +2,7 @@ const task4 = require("./task4")
 const task14 = require("./task14")
 const task17 = require("./task17")
 
-let DEBUG = true
+let DEBUG = false
 
 const express = require('express')
 const app = express()
