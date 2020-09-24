@@ -6,7 +6,7 @@ let DEBUG = false
 
 const express = require('express')
 const app = express()
-const PORT = 3000
+const PORT = 80
 
 
 const fs = require("fs");
