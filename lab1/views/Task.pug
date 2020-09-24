@@ -1,0 +1,26 @@
+- var pageTitle = "Task " + task
+
+include Header
+if(description)
+    h1 Description:
+    h2 #{description}
+
+if example
+    h3 Example:
+    p In: #{example[0]}
+    p Out: #{example[1]}
+
+form
+    h3 Ввод:
+    input(name= "input" pattern=inRegex)
+    input(type="submit" value="Отправить")
+
+if error
+    h3 Error:
+    p #{error}
+
+if (answer != null)
+    h3 Answer:
+    p #{answer}
+
+include Footer
