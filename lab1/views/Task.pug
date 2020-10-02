@@ -12,8 +12,11 @@ if example
 
 form
     h3 Ввод:
-    input(name= "input" pattern=inRegex)
-    input(type="submit" value="Отправить")
+    form(method="post")
+        input(name = "input" pattern = inRegex)
+        if isAdmin
+            input(type="hidden" name="admin" value="true")
+        input(type = "submit" value = "Отправить")
 
 if error
     h3 Error:

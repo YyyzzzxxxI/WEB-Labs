@@ -2,13 +2,14 @@
 - var pageTitle = "Home page"
 
 include Header
-
-b Welcome!
-p Select the task!
-ul
-    for i in [4, 14, 17]
-        li
-            a(href = '/api/SvasyanSpartak/lab1/task' + i) Task #{i}
+body
+    b Welcome!
+    p Select the task!
+    ul
+        for i in [4, 14, 17]
+            li
+                a(href = '/api/SvasyanSpartak/lab1/task' + i) Task #{i}
+include NavBar
 
 
 include Footer
