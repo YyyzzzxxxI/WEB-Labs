@@ -1,29 +1,33 @@
 - var pageTitle = "Task " + task
 
 include Header
-if(description)
-    h1 Description:
-    h2 #{description}
 
-if example
-    h3 Example:
-    p In: #{example[0]}
-    p Out: #{example[1]}
+body
+    div.container
+        div.content
+            if(description)
+                h1 Description:
+                h2 #{description}
 
-form
-    h3 Ввод:
-    form(method="post")
-        input(name = "input" pattern = inRegex)
-        if isAdmin
-            input(type="hidden" name="admin" value="true")
-        input(type = "submit" value = "Отправить")
+            if example
+                h3 Example:
+                p In: #{example[0]}
+                p Out: #{example[1]}
 
-if error
-    h3 Error:
-    p #{error}
+            form
+                h3 Ввод:
+                form(method="post")
+                    input(name = "input" pattern = inRegex)
+                    if isAdmin
+                        input(type="hidden" name="admin" value="true")
+                    input(type = "submit" value = "Отправить")
 
-if (answer != null)
-    h3 Answer:
-    p #{answer}
+            if error
+                h3 Error:
+                p #{error}
+
+            if (answer != null)
+                h3 Answer:
+                p #{answer}
 
 include Footer

@@ -1,5 +1,5 @@
 const lab1 = global.lab1
-const tasks = new (require("./Tasks").Tasks)()
+const tasks = new (require("./tasks").Tasks)()
 
 function Routes(app){
     app.get('/', (req, res) => {

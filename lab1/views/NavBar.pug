@@ -1,6 +1,6 @@
 div.nav
-    ul
-        li
-            a(href = '/') Main page
-        li
-            a(href = '/auth') Authentication
+    a(href = '/') Main page
+    a(href = '/auth') Authentication
+    hr
+    for i in [4, 14, 17]
+        a(href = '/api/SvasyanSpartak/lab1/task' + i) Task #{i}
