@@ -1,0 +1,24 @@
+- var pageTitle = "Login"
+
+include header
+
+body
+    div.container
+        div.content
+            h1 Login
+            form(action = "/login" method = "Post")
+                div
+                    label Name
+                    input(id="name" name="username" required)
+                div
+                    label Password
+                    input(id="password" name="password" required)
+                button(type="submit") Login
+            br
+            if(errMsg)
+                p.errMsg #{errMsg}
+            br
+            a(href="/register") Not registered yet? Go to register page
+
+
+include footer

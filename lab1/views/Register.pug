@@ -1,0 +1,24 @@
+- var pageTitle = "Register"
+
+include header
+
+body
+    div.container
+        div.content
+            h1 Register
+            form(action = "/register" method = "Post")
+                div
+                    label Name
+                    input(id="name" name="username" required)
+                div
+                    label Password
+                    input(id="password" name="password" required)
+                button(type="submit") Register
+            br
+            if(errMsg)
+                p.errMsg #{errMsg}
+            br
+            a(href="/login") Already registered? Go to login page
+
+
+include footer
